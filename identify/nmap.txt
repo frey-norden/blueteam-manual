@@ -1,0 +1,22 @@
+# some basic scans
+
+#ping sweep
+nmap -sn -PE <target -or- range>
+
+#open ports
+nmap --open <target -or- range>
+
+# show running services
+nmap -sV <target>
+
+#http,https scan
+nmap -p 80,443
+
+#look for dns/udp flag
+nmap -sU -p 53 <target>
+
+#scan udp and tcp from listed ports
+nmap -v -Pn -sU -sT -p U:53,111,137,T:21-25,80,139,443,8080 <target -or- range>
+
+
+
